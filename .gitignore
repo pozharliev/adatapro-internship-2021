@@ -4,3 +4,5 @@
 /.vscode
 #Python related directories
 /__pycache__
+# .env file
+.env
