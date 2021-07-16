@@ -1,0 +1,6 @@
+# Jetbrains related IDEs
+/.idea
+# Visual Studio Code
+/.vscode
+#Python related directories
+/__pycache__
