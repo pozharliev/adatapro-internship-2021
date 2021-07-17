@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team RED - A Data Pro</title>
+    {% load static %}
+
+  <link rel="icon" href="{% static 'img/Tab-Icon.png' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+</head>
+
+<body>
+  <div class="first_nav">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="{% static 'img/logo-horizontal.png' %}" width="112" height="28">
+          </a>
+          <a class="navbar-item is-hidden-desktop" href="tel:112">
+            <span class="icon" style="color: #333;">
+              <i class="fa fa-lg fa-phone-alt"></i>
+            </span>
+          </a>
+          <a class="navbar-item is-hidden-desktop" href="mailto:fireDepartment2021@codingburgas.bg">
+            <span class="icon" style="color: #333;">
+              <i class="fa fa-lg fa-envelope"></i>
+            </span>
+          </a>
+          <!-- Mobile Menu -->
+          <div class="navbar-burger burger" data-target="navMenuBlogHero">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div id="navMenuBlogHero" class="navbar-menu">
+          <!-- Left Nav -->
+          <div class="navbar-start">
+            <a class="navbar-item is-active" href="index.html">Начало</a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a href="https://github.com/ABPozharliev19/adatapro-internship-2021.git" target="_blank">
+                    <button class="button">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>GitHub</span>
+                    </button>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- <progress class="progress is-small is-primary" max="100"></progress> -->
+  </div>
+
+  <section class="hero main_hero is-fullheight banner">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 main-text has-text-white">Това е уебсайт за <span
+            class="typed-text has-text-primary"></span><span class="cursor">&nbsp;</span></h1>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="content">
+          <h4 class="main_title title is-4">За сайта</h4>
+        </div>
+        <div class="columns content">
+          <div class="column">
+            <p>
+              Този уебсайт има за цел да помогне на хората с намирането на PlayStation 5. Поради невъзможността на Sony
+              да
+              отговори на огромното търсене на конзолата се налага да се следи много често къде има налична, за да
+              помогнем на
+              нашите потребители ние ще изпращаме по електронните им пощи къде има наличноси на PlayStation 5. Всичко
+              това се случва
+              само с правенето на един профил.
+            </p>
+            <div class="about" style="margin-left: -15%;"><br>
+              <div class="about-item">
+                <div>
+                  <div>
+                    <i class="fa fa-phone"></i>
+                    <span>Информация</span>
+                  </div>
+                  <p style="padding-top: 3%;"><b>Достоверна</b> информация за PS 5</p>
+                </div>
+                <a href="https://www.playstation.com/bg-bg/ps5/" class="button is-success mobile-only">
+                  <span>тук</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- about Image -->
+          <div class="column about-image" style="padding: 10px;">
+            <img src="{% static 'img/ps5.png' %}" width="100%">
+          </div>
+        </div>
+        <div class="content">
+          <h5 class="main_title title is-5">Предимства</h5>
+          <p>
+            Нашият уебсайт предлага редица предимства, като актуална информация, статистики, новини и най-вече първи
+            получавате
+            информация за наличностите на PlayStation 5.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
