@@ -1,12 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Влизане | RED Team</title>
+    {% load static %}
+
+    <link rel="icon" href="{% static 'img/Tab-Icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
 </head>
+
 <body>
-<h1> You are at the Login Page </h1>
+    <div class="first_nav">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <img src="{% static 'img/logo-horizontal.png' %}" width="112" height="28">
+                    </a>
+                    <a class="navbar-item is-hidden-desktop">
+                        <span class="icon" style="color: #333;">
+                            <i class="fa fa-lg fa-envelope"></i>
+                        </span>
+                    </a>
+                    <!-- Mobile Menu -->
+                    <div class="navbar-burger burger" data-target="navMenuBlogHero">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div id="navMenuBlogHero" class="navbar-menu">
+                    <!-- Left Nav -->
+                    <div class="navbar-start">
+                        <a class="navbar-item is-active" href="index.html">Начало</a>
+                        <a class="navbar-item is-active" href="index.html">Влизане</a>
+                        <a class="navbar-item is-active" href="index.html">Регистрация</a>
+                        <a class="navbar-item is-active" href="index.html">Информация</a>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <p class="control">
+                                    <a href="https://github.com/ABPozharliev19/adatapro-internship-2021.git"
+                                        target="_blank">
+                                        <button class="button">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>GitHub</span>
+                                        </button>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="bg">
+        <div style="max-width: 30%; margin-left: 35%; padding-top: 10%;">
+            <h1 class="has-text-centered has-text-white" style="font-size: 40px; font-weight: bold;">Влизане</h1>
+
+        </div>
+    </div>
+
 </body>
+
 </html>

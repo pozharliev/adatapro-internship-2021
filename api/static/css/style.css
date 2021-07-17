@@ -110,6 +110,11 @@ footer {
     display: none;
 }
 
+.bg {
+    background: rgb(104,104,215);
+    background: linear-gradient(140deg, rgba(104,104,215,1) 32%, rgba(49,196,226,1) 100%);
+}
+
 @media only screen and (max-width: 769px) {
     .about-item {
         width: 100%;
