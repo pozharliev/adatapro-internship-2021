@@ -3,6 +3,6 @@
 # Visual Studio Code
 /.vscode
 #Python related directories
-/__pycache__
+**/__pycache__
 # .env file
 .env
