@@ -1,5 +1,8 @@
-from django.views.generic import TemplateView
+from django.views.generic import FormView
+from .forms import SignUpForm
 
 
-class SignUp(TemplateView):
+class SignUp(FormView):
     template_name = "templates/base_signup.html"
+    form_class = SignUpForm
+
