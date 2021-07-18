@@ -14,6 +14,7 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 .banner::after, .banner::before {
@@ -103,12 +104,33 @@ footer {
 .bg {
     background: rgb(104,104,215);
     background: linear-gradient(140deg, rgba(104,104,215,1) 32%, rgba(49,196,226,1) 100%);
-    height: 95vh;
+    height: 102vh;
 }
 
 .info-box {
     width: 40%;
     margin-left: 30%; 
+}
+
+.successes-h1 {
+    font-size: 30px; 
+    font-weight: bold;
+    padding-top: 30vh;
+}
+
+.successes-p {
+    font-size: 20px; 
+    padding-top: 5vh;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.successful-a {
+    color: rgb(143, 193, 240);
+}
+
+.successful-a:hover {
+    color: rgb(183, 214, 235);
 }
 
 @media only screen and (min-width: 2000px) {

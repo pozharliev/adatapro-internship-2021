@@ -7,5 +7,5 @@ urlpatterns = [
     path('signup/', include('api.signUpView.urls')),
     path('login/', include('api.logInView.urls')),
     path('', include('api.homeView.urls')),
-    path('sucessful/', include('api.successfulSignUpView.urls'))
+    path('successful/', include('api.successfulSignUpView.urls'))
 ]
