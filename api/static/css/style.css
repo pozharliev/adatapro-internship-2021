@@ -106,6 +106,11 @@ footer {
     height: 95vh;
 }
 
+.info-box {
+    width: 40%;
+    margin-left: 30%; 
+}
+
 @media only screen and (min-width: 2000px) {
     .form {
         max-width: 20%;
@@ -118,12 +123,20 @@ footer {
         max-width: 30%;
         margin-left: 35%;
     }
+    .info-box {
+        width: 50%;
+        margin-left: 25%;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
     .form {
         max-width: 40%;
         margin-left: 30%;
+    }
+    .info-box {
+        width: 70%;
+        margin-left: 15%;
     }
 }
 
@@ -140,6 +153,10 @@ footer {
     .form {
         max-width: 50%;
         margin-left: 25%;
+    }
+    .info-box {
+        width: 70%;
+        margin-left: 15%;
     }
 }
 
