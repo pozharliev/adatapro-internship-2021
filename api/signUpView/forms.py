@@ -4,7 +4,8 @@ from django import forms
 
 
 class SignUpForm(ModelForm):
-    profile_username = forms.CharField(label="Username", max_length=64, widget=forms.TextInput(attrs={'class': 'input mr',
+    profile_username = forms.CharField(label="Username", max_length=64, widget=forms.TextInput(attrs={'class': 'input '
+                                                                                                               'mr',
                                                                                                       'placeholder': 'Mitko123 '
                                                                                                       }))
     profile_email = forms.EmailField(label="Email", max_length=128, widget=forms.EmailInput(attrs={'class': 'input mr',
