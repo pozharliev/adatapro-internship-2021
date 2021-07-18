@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +21,7 @@
 </head>
 
 <body>
-{% block content %}
+    {% block content %}
     <div class="first_nav">
         <div class="container">
             <nav class="navbar">
@@ -76,17 +74,16 @@
     <div class="bg">
         <div style="max-width: 30%; margin-left: 35%; padding-top: 10%;">
             <h1 class="has-text-centered has-text-white" style="font-size: 40px; font-weight: bold;">Регистрация</h1>
-
+            <form action="/signup/" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit">
+            </form>
+            {% endblock %}
         </div>
     </div>
-    <form action="/signup/" method = "POST">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">    
-    </form>
-{% endblock %}
+
 
 </body>
 
 </html>
-

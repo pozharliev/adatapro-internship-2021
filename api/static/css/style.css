@@ -109,3 +109,8 @@ footer {
         display: none;
     }
 }
+
+#mr {
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
