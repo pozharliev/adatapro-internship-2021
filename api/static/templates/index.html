@@ -16,6 +16,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
   <!-- <link rel="stylesheet" href="css/debug.css"> -->
+
+  <style>
+    .parallax {
+      background-image: url("{% static 'img/ps5.png' %}");
+    }
+  </style>
+
 </head>
 
 <body>
@@ -83,9 +90,17 @@
       <div class="container">
         <div class="content">
           <h4 class="main_title title is-4">За сайта</h4>
+        </div><br><br><br>
+
+        <div class="columns content">
+          <div class="parallax"
+            style="width: 100%; height: 400px; background-attachment: fixed; background-position: center; background-repeat: no-repeat;">
+          </div>
         </div>
+
         <div class="columns content">
           <div class="column">
+            <br><br><br>
             <p>
               Този уебсайт има за цел да помогне на хората с намирането на PlayStation 5. Поради невъзможността на Sony
               да
@@ -110,10 +125,7 @@
               </div>
             </div>
           </div>
-          <!-- about Image -->
-          <div class="column about-image" style="padding: 10px;">
-            <img src="{% static 'img/ps5.png' %}" width="100%">
-          </div>
+
         </div>
         <div class="content">
           <h5 class="main_title title is-5">Предимства</h5>
