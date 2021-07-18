@@ -93,9 +93,30 @@ footer {
     margin-bottom: 5%;
 }
 
+
+.form {
+    max-width: 50%; 
+    margin-left: 25%; 
+    padding-top: 10%;
+}
+
 .bg {
     background: rgb(104,104,215);
     background: linear-gradient(140deg, rgba(104,104,215,1) 32%, rgba(49,196,226,1) 100%);
+}
+
+@media only screen and (min-width: 2000px) {
+    .form {
+        max-width: 20%;
+        margin-left: 40%;
+    }
+}
+
+@media only screen and (max-width: 2000px) {
+    .form {
+        max-width: 30%;
+        margin-left: 35%;
+    }
 }
 
 @media only screen and (max-width: 769px) {
