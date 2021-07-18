@@ -13,10 +13,8 @@ class SignUp(FormView):
         username = request.POST['profile_username']
         email = request.POST['profile_email']
         password = request.POST['password_hash']
-        print(username, email, password)
-        login_info = SignUpForm(data=request.POST)
-
-        if SignUpForm.form_validation(username, email, password):
+        login_info = SignUpForm(request.POST)
+        if SignUpForm.form_validation(username, email, password) and login_info.is_valid():
             login_info.save(commit=True)
             return login
         else:

@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'api.signUpView',
-    'api.logInView'
+    'api.logInView',
+    'api.successfulSignUpView'
 ]
 
 MIDDLEWARE = [

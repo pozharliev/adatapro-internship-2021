@@ -6,5 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', include('api.signUpView.urls')),
     path('login/', include('api.logInView.urls')),
-    path('', include('api.homeView.urls'))
+    path('', include('api.homeView.urls')),
+    path('sucessful/', include('api.successfulSignUpView.urls'))
 ]
