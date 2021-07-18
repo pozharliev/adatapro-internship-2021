@@ -44,9 +44,7 @@ ROOT_URLCONF = 'api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['api/signUpView/',
-                 'api/logInView/',
-                 'api/homeView/'
+        'DIRS': ['api/static/',
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
