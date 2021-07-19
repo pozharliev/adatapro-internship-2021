@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +23,7 @@
         <div class="container">
             <nav class="navbar">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="index.html">
+                    <a class="navbar-item" href="/">
                         <img src="{% static 'img/logo-horizontal.png' %}" width="112" height="28">
                     </a>
                     <a class="navbar-item is-hidden-desktop">
@@ -41,22 +42,44 @@
                 <div id="navMenuBlogHero" class="navbar-menu">
                     <!-- Left Nav -->
                     <div class="navbar-start">
-                        <a class="navbar-item is-active" href="index.html">Начало</a>
-                        <a class="navbar-item is-active" href="index.html">Влизане</a>
-                        <a class="navbar-item is-active" href="index.html">Регистрация</a>
-                        <a class="navbar-item is-active" href="index.html">Информация</a>
+                        <a href="/" class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>Начало</span>
+                        </a>
+                        <a class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-info"></i>
+                            </span>
+                            <span>Информация</span>
+                        </a>
+                        <a class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
                     </div>
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="field is-grouped">
                                 <p class="control">
-                                    <a href="https://github.com/ABPozharliev19/adatapro-internship-2021.git"
-                                        target="_blank">
-                                        <button class="button">
+                                    <a href="/signup">
+                                        <button class="button is-info">
                                             <span class="icon">
-                                                <i class="fab fa-github"></i>
+                                                <i class="fas fa-user-plus"></i>
                                             </span>
-                                            <span>GitHub</span>
+                                            <span>Регистрация</span>
+                                        </button>
+                                    </a>
+
+                                    <a href="/login">
+                                        <button class="button is-info">
+                                            <span class="icon">
+                                                <i class="fas fa-sign-in-alt"></i>
+                                            </span>
+                                            <span>Влизане</span>
                                         </button>
                                     </a>
                                 </p>
@@ -85,4 +108,5 @@
 
     <script defer src="{% static 'js/navbar.js' %}"></script>
 </body>
+
 </html>

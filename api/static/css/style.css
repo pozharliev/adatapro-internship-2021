@@ -115,14 +115,16 @@ footer {
 .successes-h1 {
     font-size: 30px; 
     font-weight: bold;
-    padding-top: 30vh;
+    padding-top: 35vh;
+    margin-left: -50%;
+    position: relative;
 }
 
 .successes-p {
     font-size: 20px; 
-    padding-top: 5vh;
     margin-left: 20%;
     margin-right: 20%;
+    padding-top: 5vh;
 }
 
 .successful-a {
@@ -133,10 +135,33 @@ footer {
     color: rgb(183, 214, 235);
 }
 
+.img {
+    margin-left: 25%;
+    padding-top: 30vh;
+    float: left;
+    margin-right: -28%;
+    position: relative;
+    width: 100px;
+}
+
+.p1 {
+    margin-left: -5%;
+    position: relative;
+}
+
+.successful-box {
+    position: flex;
+}
+
 @media only screen and (min-width: 2000px) {
     .form {
         max-width: 20%;
         margin-left: 40%;
+    }
+    .img {
+        margin-right: -35%;
+        /* margin-left: 25%; */
+        margin-left: 35%;
     }
 }
 
@@ -149,6 +174,35 @@ footer {
         width: 50%;
         margin-left: 25%;
     }
+    .img {
+        margin-right: -28%;
+        /* margin-left: 25%; */
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+    .img {
+        margin-right: -25%;
+        /* margin-left: 25%; */
+        margin-left: 26%;
+    }
+}
+
+@media only screen and (max-width: 1275px) {
+    .img {
+        margin-right: -20%;
+        /* margin-left: 25%; */
+        margin-left: 22%;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .img {
+        margin-right: -16%;
+        /* margin-left: 25%; */
+        margin-left: 20%;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -159,6 +213,22 @@ footer {
     .info-box {
         width: 70%;
         margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .img {
+        margin-right: -14%;
+        /* margin-left: 25%; */
+        margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .img {
+        margin-right: -8%;
+        /* margin-left: 25%; */
+        margin-left: 12%;
     }
 }
 
@@ -180,6 +250,26 @@ footer {
         width: 70%;
         margin-left: 15%;
     }
+    .img {
+        margin-right: -3%;
+        /* margin-left: 25%; */
+        margin-left: 6%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .img {
+        margin-left: 30%;
+        padding-top: 10%;
+        width: 40%;
+        /* padding-bottom: 5vh; */
+    }
+    .successful-box {
+        display: block;
+    }
+    .successes-h1 {
+        margin-left: 1%;
+    }
 }
 
 @media only screen and (max-width: 350px) {
@@ -188,6 +278,9 @@ footer {
     }
     .h1 {
         font-size: 20px;
+    }
+    .img {
+        padding-top: 30%;
     }
 }
 
