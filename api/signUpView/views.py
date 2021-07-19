@@ -1,5 +1,6 @@
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
+from django.urls import reverse, reverse_lazy
 from django.views.generic import FormView
 from django.contrib.auth.models import User
 from api.helpers.validations import validation
@@ -11,9 +12,10 @@ from api.signUpView.forms import SignUpForm
 class SignUp(FormView):
     template_name = "templates/base_signup.html"
     form_class = SignUpForm
-    success_url = '/'
+    success_url = 'successful'
 
     def post(self, request, *args, **kwargs):
+        redirection = super(SignUp, self).post(self, request, args, kwargs)
         username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
@@ -22,7 +24,7 @@ class SignUp(FormView):
                 user = User.objects.create_user(username, email, password)
             except IntegrityError:
                 return JsonResponse({'type': 'unsuccessful-register'})
-            return JsonResponse({'type': 'successful-register'})
+            return redirection
         else:
             return JsonResponse({'type': 'unsuccessful-register'})
 
