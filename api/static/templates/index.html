@@ -16,13 +16,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
   <!-- <link rel="stylesheet" href="css/debug.css"> -->
-
-  <style>
-    .parallax {
-      background-image: url("{% static 'img/ps5.png' %}");
-    }
-  </style>
-
 </head>
 
 <body>
@@ -49,7 +42,7 @@
         <div id="navMenuBlogHero" class="navbar-menu">
           <!-- Left Nav -->
           <div class="navbar-start">
-            <a href = "/" class="navbar-item is-active">
+            <a href="/" class="navbar-item is-active">
               <span class="icon">
                 <i class="fas fa-home"></i>
               </span>
@@ -68,48 +61,57 @@
               <span>GitHub</span>
             </a>
           </div>
-            {% if user.is_authenticated %}
-                <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <a href="/signup">
-                    <button class="button is-info">
-                      <span class="icon">
-                        <i class="fas fa-user-plus"></i>
-                      </span>
-                      <span>Hallo</span>
-                    </button>
-                  </a>
-            {% endif%}
-        {% if not user.is_authenticated  %}
+          {% if user.is_authenticated %}
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
                   <a href="/signup">
-                    <button class="button is-info">
+                    <button class="button">
                       <span class="icon">
-                        <i class="fas fa-user-plus"></i>
+                        <i class="fas fa-user"></i>
                       </span>
-                      <span>Регистрация</span>
+                      <span>{{ user.username}}</span>
                     </button>
                   </a>
-                     {% endif %}
 
-                  <a href="/login">
+                  <a href="/signup">
                     <button class="button is-info">
+                      <span>Излизане</span>
                       <span class="icon">
-                        <i class="fas fa-sign-in-alt"></i>
+                        <i class="fas fa-sign-out-alt"></i>
                       </span>
-                      <span>Влизане</span>
                     </button>
                   </a>
-                </p>
+                  {% endif%}
+                  {% if not user.is_authenticated %}
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <div class="field is-grouped">
+                      <p class="control">
+                        <a href="/signup">
+                          <button class="button is-info">
+                            <span class="icon">
+                              <i class="fas fa-user-plus"></i>
+                            </span>
+                            <span>Регистрация</span>
+                          </button>
+                        </a>
+
+                        <a href="/login">
+                          <button class="button is-info">
+                            <span class="icon">
+                              <i class="fas fa-sign-in-alt"></i>
+                            </span>
+                            <span>Влизане</span>
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
               </div>
-            </div>
-          </div>
-        </div>
       </nav>
     </div>
   </div>
@@ -187,62 +189,62 @@
   <script defer src="{% static 'js/isTyping.js' %}"></script>
 
 
-<footer class="hero">
+  <footer class="hero">
     <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="content">
-                        <h6 class="footer_title title is-6">Какво е PlayStation 5?</h6>
-                        <p>PlayStation 5 (PS5) е домашна игрална конзола, разработвана от Sony Interactive
-                            Entertainment.
-                            Системата ще идва в два варианта – базов PlayStation 5 с оптичен четец за дискове, както и
-                            Digital
-                            Edition без такова устройство.</p>
-                    </div>
-                </div>
-                <div class="column is-4" style="text-align: center;">
-                    <div class="content">
-                        <div>
-                            <h6 class="footer_title title is-6">Социални Медии</h6>
-                            <p>Последвайте ни в социалните медии!</p>
-                            <a class="button is-medium is-facebook">
-                                <span class="icon">
-                                    <i class="fab fa-facebook-f fa-lg"></i>
-                                </span>
-                            </a>
-                            <a class="button is-medium is-foursquare">
-                                <span class="icon">
-                                    <i class="fab fa-instagram fa-lg"></i>
-                                </span>
-                            </a>
-                            <a class="button is-medium is-twitter">
-                                <span class="icon">
-                                    <i class="fab fa-twitter fa-lg"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <div class="content">
-                        <h6 class="footer_title title is-6">Наличности</h6>
-                        <p>Бъдете от първите, които ще се сдобият със свой собствен PS5, като се регистрирате, за да
-                            получите
-                            информация, когато има наличности.</p>
-                        <a class="button is-info" href="pages/register.html">Регистрация</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <div class="content">
+              <h6 class="footer_title title is-6">Какво е PlayStation 5?</h6>
+              <p>PlayStation 5 (PS5) е домашна игрална конзола, разработвана от Sony Interactive
+                Entertainment.
+                Системата ще идва в два варианта – базов PlayStation 5 с оптичен четец за дискове, както и
+                Digital
+                Edition без такова устройство.</p>
             </div>
+          </div>
+          <div class="column is-4" style="text-align: center;">
+            <div class="content">
+              <div>
+                <h6 class="footer_title title is-6">Социални Медии</h6>
+                <p>Последвайте ни в социалните медии!</p>
+                <a class="button is-medium is-facebook">
+                  <span class="icon">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </span>
+                </a>
+                <a class="button is-medium is-foursquare">
+                  <span class="icon">
+                    <i class="fab fa-instagram fa-lg"></i>
+                  </span>
+                </a>
+                <a class="button is-medium is-twitter">
+                  <span class="icon">
+                    <i class="fab fa-twitter fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="content">
+              <h6 class="footer_title title is-6">Наличности</h6>
+              <p>Бъдете от първите, които ще се сдобият със свой собствен PS5, като се регистрирате, за да
+                получите
+                информация, когато има наличности.</p>
+              <a class="button is-info" href="pages/register.html">Регистрация</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="hero-foot">
-        <div class="container has-text-centered">
-            <p class="footer-text"> &copy; 2021 - RED Team</p>
-        </div>
+      <div class="container has-text-centered">
+        <p class="footer-text"> &copy; 2021 - RED Team</p>
+      </div>
     </div>
     <br>
-</footer>
+  </footer>
 
 </body>
 

@@ -61,32 +61,57 @@
                             <span>GitHub</span>
                         </a>
                     </div>
+                    {% if user.is_authenticated %}
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="field is-grouped">
                                 <p class="control">
                                     <a href="/signup">
-                                        <button class="button is-info">
+                                        <button class="button">
                                             <span class="icon">
-                                                <i class="fas fa-user-plus"></i>
+                                                <i class="fas fa-user"></i>
                                             </span>
-                                            <span>Регистрация</span>
+                                            <span>{{ user.username}}</span>
                                         </button>
                                     </a>
 
-                                    <a href="/login">
+                                    <a href="/signup">
                                         <button class="button is-info">
+                                            <span>Излизане</span>
                                             <span class="icon">
-                                                <i class="fas fa-sign-in-alt"></i>
+                                                <i class="fas fa-sign-out-alt"></i>
                                             </span>
-                                            <span>Влизане</span>
                                         </button>
                                     </a>
-                                </p>
+                                    {% endif%}
+                                    {% if not user.is_authenticated %}
+                                <div class="navbar-end">
+                                    <div class="navbar-item">
+                                        <div class="field is-grouped">
+                                            <p class="control">
+                                                <a href="/signup">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-user-plus"></i>
+                                                        </span>
+                                                        <span>Регистрация</span>
+                                                    </button>
+                                                </a>
+
+                                                <a href="/login">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-sign-in-alt"></i>
+                                                        </span>
+                                                        <span>Влизане</span>
+                                                    </button>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
                             </div>
-                        </div>
-                    </div>
-                </div>
             </nav>
         </div>
     </div>

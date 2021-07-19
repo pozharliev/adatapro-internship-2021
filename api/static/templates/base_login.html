@@ -24,7 +24,7 @@
         <div class="container">
             <nav class="navbar">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="index.html">
+                    <a class="navbar-item" href="/">
                         <img src="{% static 'img/logo-horizontal.png' %}" width="112" height="28">
                     </a>
                     <a class="navbar-item is-hidden-desktop">
@@ -43,32 +43,80 @@
                 <div id="navMenuBlogHero" class="navbar-menu">
                     <!-- Left Nav -->
                     <div class="navbar-start">
-                        <a class="navbar-item is-active" href="index.html">Начало</a>
-                        <a class="navbar-item is-active" href="index.html">Влизане</a>
-                        <a class="navbar-item is-active" href="index.html">Регистрация</a>
-                        <a class="navbar-item is-active" href="index.html">Информация</a>
+                        <a href="/" class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>Начало</span>
+                        </a>
+                        <a class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-info"></i>
+                            </span>
+                            <span>Информация</span>
+                        </a>
+                        <a class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
                     </div>
+                    {% if user.is_authenticated %}
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="field is-grouped">
                                 <p class="control">
-                                    <a href="https://github.com/ABPozharliev19/adatapro-internship-2021.git"
-                                        target="_blank">
+                                    <a href="/signup">
                                         <button class="button">
                                             <span class="icon">
-                                                <i class="fab fa-github"></i>
+                                                <i class="fas fa-user"></i>
                                             </span>
-                                            <span>GitHub</span>
+                                            <span>{{ user.username}}</span>
                                         </button>
                                     </a>
-                                </p>
+
+                                    <a href="/signup">
+                                        <button class="button is-info">
+                                            <span>Излизане</span>
+                                            <span class="icon">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                            </span>
+                                        </button>
+                                    </a>
+                                    {% endif%}
+                                    {% if not user.is_authenticated %}
+                                <div class="navbar-end">
+                                    <div class="navbar-item">
+                                        <div class="field is-grouped">
+                                            <p class="control">
+                                                <a href="/signup">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-user-plus"></i>
+                                                        </span>
+                                                        <span>Регистрация</span>
+                                                    </button>
+                                                </a>
+
+                                                <a href="/login">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-sign-in-alt"></i>
+                                                        </span>
+                                                        <span>Влизане</span>
+                                                    </button>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
                             </div>
-                        </div>
-                    </div>
-                </div>
             </nav>
         </div>
     </div>
+
     <div class="bg">
         <div style="max-width: 30%; margin-left: 35%; padding-top: 10%;">
             <h1 class="has-text-centered has-text-white" style="font-size: 40px; font-weight: bold;">Влизане</h1>

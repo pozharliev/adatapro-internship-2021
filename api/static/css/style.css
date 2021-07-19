@@ -94,6 +94,9 @@ footer {
     margin-bottom: 5%;
 }
 
+ul > li {
+    color: #ff3939;
+}
 
 .form {
     max-width: 50%; 
