@@ -68,6 +68,21 @@
               <span>GitHub</span>
             </a>
           </div>
+            {% if user.is_authenticated %}
+                <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a href="/signup">
+                    <button class="button is-info">
+                      <span class="icon">
+                        <i class="fas fa-user-plus"></i>
+                      </span>
+                      <span>Hallo</span>
+                    </button>
+                  </a>
+            {% endif%}
+        {% if not user.is_authenticated  %}
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
@@ -80,6 +95,7 @@
                       <span>Регистрация</span>
                     </button>
                   </a>
+                     {% endif %}
 
                   <a href="/login">
                     <button class="button is-info">
