@@ -1,6 +1,5 @@
 from django.forms import ModelForm
-from django.contrib.auth.forms import UserCreationForm
-from .models import Profile
+from api.signUpView.models import Profile
 from django import forms
 
 
@@ -20,6 +19,3 @@ class SignUpForm(ModelForm):
         model = Profile
         fields = ["profile_username", "profile_email", "password_hash"]
 
-    @staticmethod
-    def form_validation(username, email, password):
-        return True

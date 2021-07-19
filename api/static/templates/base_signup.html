@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +18,6 @@
 </head>
 
 <body>
-    {% block content %}
     <div class="first_nav">
         <div class="container">
             <nav class="navbar">
@@ -84,12 +80,9 @@
                 <input type="submit" value="Submit" class="button is-success"
                     style="margin-top: 2%; margin-bottom: 5%;">
             </form>
-            {% endblock %}
         </div>
     </div>
 
     <script defer src="{% static 'js/navbar.js' %}"></script>
-
 </body>
-
 </html>

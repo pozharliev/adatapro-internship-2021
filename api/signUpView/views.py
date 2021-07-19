@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from .forms import SignUpForm
+from api.helpers.validations import validation
 
 
 class SignUp(FormView):
@@ -14,7 +15,7 @@ class SignUp(FormView):
         email = request.POST['profile_email']
         password = request.POST['password_hash']
         login_info = SignUpForm(request.POST)
-        if SignUpForm.form_validation(username, email, password) and login_info.is_valid():
+        if validation(username, email, password) and login_info.is_valid():
             login_info.save(commit=True)
             return login
         else:
