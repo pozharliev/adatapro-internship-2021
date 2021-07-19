@@ -1,8 +1,11 @@
+from django.db import IntegrityError
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
-from .forms import SignUpForm
+from django.contrib.auth.models import User
 from api.helpers.validations import validation
 from django.http import JsonResponse
+
+from api.signUpView.forms import SignUpForm
 
 
 class SignUp(FormView):
@@ -11,12 +14,15 @@ class SignUp(FormView):
     success_url = '/'
 
     def post(self, request, *args, **kwargs):
-        username = request.POST['profile_username']
-        email = request.POST['profile_email']
-        password = request.POST['password_hash']
-        login_info = SignUpForm(request.POST)
-        if validation(username, email, password) and login_info.is_valid():
-            login_info.save(commit=True)
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        if validation(username, email, password):
+            try:
+                user = User.objects.create_user(username, email, password)
+            except IntegrityError:
+                return JsonResponse({'type': 'unsuccessful-register'})
             return JsonResponse({'type': 'successful-register'})
         else:
             return JsonResponse({'type': 'unsuccessful-register'})
+
