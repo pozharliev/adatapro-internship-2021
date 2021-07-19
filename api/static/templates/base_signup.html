@@ -93,16 +93,21 @@
 
     <div class="bg">
         <div class="form">
-            <h1 class="has-text-centered has-text-white h1">
-                Регистрация</h1>
+            <div style="border-style: solid; border-width: 4px; border-color: white; border-radius: 20px;">
+                <div style="margin: 5%;">
+                    <h1 class="has-text-centered has-text-white h1">
+                        Регистрация
+                    </h1>
 
-            <form method="POST">
-                {% csrf_token %}
-                {{ form }}
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form }}
 
-                <input type="submit" value="Submit" class="button is-success"
-                    style="margin-top: 2%; margin-bottom: 5%;">
-            </form>
+                        <input type="submit" value="Submit" class="button is-success"
+                            style="margin-top: 2%; margin-bottom: 5%;">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
