@@ -1,2 +1,2 @@
-def validation(username,email,password):
+def validation(username, email, password):
     return True
