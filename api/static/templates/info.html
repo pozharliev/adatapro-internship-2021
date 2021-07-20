@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team RED | A Data Pro</title>
+    <!-- {% load static %} -->
+
+    <link rel="icon" href="{% static 'img/Tab-Icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+</head>
+
+<body>
+    <div class="first_nav">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="{% static 'img/logo-horizontal.png' %}" width="112" height="28">
+                    </a>
+                    <a class="navbar-item is-hidden-desktop">
+                        <span class="icon" style="color: #333;">
+                            <i class="fa fa-lg fa-envelope"></i>
+                        </span>
+                    </a>
+                    <!-- Mobile Menu -->
+                    <div class="navbar-burger burger" data-target="navMenuBlogHero">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div id="navMenuBlogHero" class="navbar-menu">
+                    <!-- Left Nav -->
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>Начало</span>
+                        </a>
+                        <a class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-info"></i>
+                            </span>
+                            <span>Информация</span>
+                        </a>
+                        <a class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    {% if user.is_authenticated %}
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <p class="control">
+                                    <a href="/signup">
+                                        <button class="button">
+                                            <span class="icon">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                            <span>{{ user.username}}</span>
+                                        </button>
+                                    </a>
+
+                                    <a href="/logout">
+                                        <button class="button is-info">
+                                            <span>Излизане</span>
+                                            <span class="icon">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                            </span>
+                                        </button>
+                                    </a>
+                                    {% endif%}
+                                    {% if not user.is_authenticated %}
+                                <div class="navbar-end">
+                                    <div class="navbar-item">
+                                        <div class="field is-grouped">
+                                            <p class="control">
+                                                <a href="/signup">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-user-plus"></i>
+                                                        </span>
+                                                        <span>Регистрация</span>
+                                                    </button>
+                                                </a>
+
+                                                <a href="/login">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-sign-in-alt"></i>
+                                                        </span>
+                                                        <span>Влизане</span>
+                                                    </button>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+            </nav>
+        </div>
+    </div>
+
+    <div style="margin-left: 10%; margin-right: 10%; margin-top: 5%;">
+        <h1 class="title is-3" style="margin-bottom: 5%;">Каква е целта на нашият сайт?</h1>
+        <p>Заради невъзможността да се отговори на голямото търсене на PlayStation 5 много хора не могат да се сдобият с
+            него.
+            Нашият сайт спестява време на потребителите, като не ги кара да следят постоянно за наличен PS5, а
+            го
+            прави
+            вместо него. Когато бъде намерена продаваща се конзола потребителите ще получат имейл, на който пише къде
+            може
+            да се намери.
+            Единственото, което потребителите трябва да направят, за да използват предимствата на нашата платформа е да
+            се
+            регистрират.
+        </p>
+    </div>
+
+</body>
+
+</html>
