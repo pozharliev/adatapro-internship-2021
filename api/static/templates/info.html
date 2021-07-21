@@ -76,17 +76,19 @@
                                             <span>{{ user.username}}</span>
                                         </button>
                                     </a>
+                                </p>
 
-                                    <a href="/logout">
-                                        <button class="button is-info">
-                                            <span>Излизане</span>
-                                            <span class="icon">
-                                                <i class="fas fa-sign-out-alt"></i>
-                                            </span>
-                                        </button>
-                                    </a>
-                                    {% endif%}
-                                    {% if not user.is_authenticated %}
+                                <a href="/logout">
+                                    <button class="button is-info">
+                                        <span>Излизане</span>
+                                        <span class="icon">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                        </span>
+                                    </button>
+                                </a>
+                                {% endif%}
+
+                                {% if not user.is_authenticated %}
                                 <div class="navbar-end">
                                     <div class="navbar-item">
                                         <div class="field is-grouped">
@@ -112,8 +114,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                {% endif %}
                             </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </nav>
         </div>
     </div>
