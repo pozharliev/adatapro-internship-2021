@@ -9,15 +9,21 @@
     {% load static %}
 
     <link rel="icon" href="{% static 'img/Tab-Icon.png' %}">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/account_styling.css">
-    <link rel="stylesheet" type="text/css" href="../css/footer_style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer_style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
     <!-- <link rel="stylesheet" href="../css/debug.css"> -->
+
+    <style>
+        .profile_img1 {
+            background: rgb(104, 104, 215);
+            background: linear-gradient(140deg, rgba(104, 104, 215, 1) 0%, rgba(49, 196, 226, 1) 100%);
+        }
+    </style>
 </head>
 
 <body>
@@ -118,8 +124,8 @@
         </div>
     </div>
 
-    <div class="columns" style="margin-left: 5%; margin-top: 5%; margin-right: 5%;">
-        <div class="column is-4">
+    <div class="columns" style="margin-top: 3%; margin-bottom: 3%;">
+        <div class="column is-3" style="padding-left: 3%;">
 
             <div class="panel is-info is-boxed is-centered">
                 <ul>
@@ -158,25 +164,18 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="column" style="padding-right: 3%;">
             <div id="tab-content" class="box">
                 <div id="profile-info">
                     <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Профил</p>
                     <div class="columns">
                         <div class="column">
                             <div style="margin: 15%;">
-                                <img class="profile_img" src="../img/users-icon.png"
+                                <img class="profile_img1" src="{% static 'img/user-icon.png' %}"
                                     style="width: 60%; border-radius: 550px; margin-left: 20%;"> <br><br>
 
                                 <p class="title is-4 has-text-centered">{{ user.username}}</p>
                                 <p class="has-text-centered" style="margin-top: -5%;">{{ user.email}}</p><br>
-
-                                <button class="button is-info" style="margin-left: 20%;">
-                                    <span class="icon is-small">
-                                        <i class="far fa-edit"></i>
-                                    </span>
-                                    <span>Редактиране</span>
-                                </button>
                             </div>
                         </div>
 
@@ -184,7 +183,7 @@
                             <p class="title is-4" style="margin-top: 15%;">Известия</p>
 
                             <div>
-                                <table class="table is-striped is-hoverable">
+                                <table class="table is-striped is-hoverable is-fullwidth">
                                     <thead>
                                         <tr>
                                             <th>Известие</th>
@@ -222,22 +221,32 @@
                         </div>
                         <div class="message-body">
                             <p>Действията в тази зона могат да бъдат <strong>опасни</strong> !</p><br>
-                            <button class="button is-danger" style="margin-right: 5%;">
+
+                            <button class="button is-danger" style="margin-right: 3%; margin-top: 2%;">
+                                <span>Редактиране</span>
+                                <span class="icon is-small">
+                                    <i class="far fa-edit"></i>
+                                </span>
+                            </button>
+
+                            <button class="button is-danger" style="margin-right: 3%; margin-top: 2%;">
                                 <span>Смяна на паролата</span>
                                 <span class="icon is-small">
-                                    <i class="fas fa-times"></i>
+                                    <i class="fas fa-lock"></i>
                                 </span>
                             </button>
-                            <button class="button is-danger" style="margin-right: 5%;">
+
+                            <button class="button is-danger" style="margin-right: 3%; margin-top: 2%;">
                                 <span>Смяна на имайла</span>
                                 <span class="icon is-small">
-                                    <i class="fas fa-times"></i>
+                                    <i class="fas fa-envelope"></i>
                                 </span>
                             </button>
-                            <button class="button is-danger is-outlined">
+
+                            <button class="button is-danger is-outlined" style="margin-top: 2%;">
                                 <span>Изтриване на акаунт</span>
                                 <span class="icon is-small">
-                                    <i class="fas fa-times"></i>
+                                    <i class="fas fa-user-times"></i>
                                 </span>
                             </button>
                         </div>
@@ -245,96 +254,98 @@
                 </div>
 
                 <div id="users" class="is-hidden">
-                    <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Потребители</p>
+                    <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Потребители</p><br>
 
-                    <table class="table is-striped is-hoverable" style="width: 100%;">
-                        <thead>
-                            <tr>
-                                <th>Потебителско име</th>
-                                <th>Имейл</th>
-                                <th>Действия</th>
-                            </tr>
-                        </thead>
+                    <div style="overflow: auto;">
+                        <table class="table is-striped is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Потебителско име</th>
+                                    <th>Имейл</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr>
-                                <th>{{ user[0].username}}</th>
-                                <th>{{ user[0].email}}</th>
-                                <th><button class="button is-danger is-outlined">
-                                        <span>Изтриване</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-user-times"></i>
-                                        </span>
-                                    </button>
-                                </th>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th>{{ user.username}}</th>
+                                    <th>{{ user.email}}</th>
+                                    <th><button class="button is-danger is-outlined">
+                                            <span>Изтриване</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-user-times"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                </tr>
 
-                            <tr>
-                                <th>{{ user[1].username}}</th>
-                                <th>{{ user[1].email}}</th>
-                                <th><button class="button is-danger is-outlined">
-                                        <span>Изтриване</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-user-times"></i>
-                                        </span>
-                                    </button>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th>{{ user.username}}</th>
+                                    <th>{{ user.email}}</th>
+                                    <th><button class="button is-danger is-outlined">
+                                            <span>Изтриване</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-user-times"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                </tr>
 
-                            <tr>
-                                <th>{{ user[2].username}}</th>
-                                <th>{{ user[2].email}}</th>
-                                <th><button class="button is-danger is-outlined">
-                                        <span>Изтриване</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-user-times"></i>
-                                        </span>
-                                    </button>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th>{{ user.username}}</th>
+                                    <th>{{ user.email}}</th>
+                                    <th><button class="button is-danger is-outlined">
+                                            <span>Изтриване</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-user-times"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                </tr>
 
-                            <tr>
-                                <th>{{ user[3].username}}</th>
-                                <th>{{ user[3].email}}</th>
-                                <th><button class="button is-danger is-outlined">
-                                        <span>Изтриване</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-user-times"></i>
-                                        </span>
-                                    </button>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th>{{ user.username}}</th>
+                                    <th>{{ user.email}}</th>
+                                    <th><button class="button is-danger is-outlined">
+                                            <span>Изтриване</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-user-times"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                </tr>
 
-                            <tr>
-                                <th>{{ user[4].username}}</th>
-                                <th>{{ user[4].email}}</th>
-                                <th><button class="button is-danger is-outlined">
-                                        <span>Изтриване</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-user-times"></i>
-                                        </span>
-                                    </button>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th>{{ user.username}}</th>
+                                    <th>{{ user.email}}</th>
+                                    <th><button class="button is-danger is-outlined">
+                                            <span>Изтриване</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-user-times"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                </tr>
 
-                            <tr>
-                                <th>{{ user[5].username}}</th>
-                                <th>{{ user[5].email}}</th>
-                                <th><button class="button is-danger is-outlined">
-                                        <span>Изтриване</span>
-                                        <span class="icon is-small">
-                                            <i class="fas fa-user-times"></i>
-                                        </span>
-                                    </button>
-                                </th>
-                            </tr>
+                                <tr>
+                                    <th>{{ user.username}}</th>
+                                    <th>{{ user.email}}</th>
+                                    <th><button class="button is-danger is-outlined">
+                                            <span>Изтриване</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-user-times"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                </tr>
 
-                        </tbody>
-                    </table> <br><br>
+                            </tbody>
+                        </table>
+                    </div><br><br>
 
                     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                        <a class="pagination-previous" disabled>Следваща</a>
                         <a class="pagination-next" disabled>Предишна</a>
+                        <a class="pagination-previous" disabled>Следваща</a>
                         <ul class="pagination-list">
                             <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
                             <li><a class="pagination-link" aria-label="Goto page 2" disabled>2</a></li>
@@ -346,7 +357,7 @@
                     <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Следене</p><br><br>
 
                     <div class="columns" style="margin-right: 2%; margin-left: 2%;">
-                        <div class="card column" style="width: 200px;">
+                        <div class="card column" style="margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -374,7 +385,7 @@
                             </div>
                         </div>
 
-                        <div class="card column" style="width: 200px; margin-left: 5%;">
+                        <div class="card column" style="margin-left: 2%; margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -401,8 +412,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div><br><br>
 
-                        <div class="card column" style="width: 200px; margin-left: 5%;">
+                    <div class="columns" style="margin-right: 2%; margin-left: 2%;">
+                        <div class="card column" style="margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -430,10 +443,8 @@
 
                             </div>
                         </div>
-                    </div><br><br>
 
-                    <div class="columns" style="margin-right: 2%; margin-left: 2%;">
-                        <div class="card column" style="width: 200px;">
+                        <div class="card column" style="margin-left: 2%; margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -460,8 +471,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div><br><br>
 
-                        <div class="card column" style="width: 200px; margin-left: 5%;">
+                    <div class="columns" style="margin-right: 2%; margin-left: 2%;">
+                        <div class="card column" style="margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -489,7 +502,7 @@
                             </div>
                         </div>
 
-                        <div class="card column" style="width: 200px; margin-left: 5%;">
+                        <div class="card column" style="margin-left: 2%; margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -520,7 +533,7 @@
                     </div><br><br>
 
                     <div class="columns" style="margin-right: 2%; margin-left: 2%;">
-                        <div class="card column" style="width: 200px;">
+                        <div class="card column" style="margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -548,7 +561,7 @@
                             </div>
                         </div>
 
-                        <div class="card column" style="width: 200px; margin-left: 5%;">
+                        <div class="card column" style="margin-left: 2%; margin-top: 2%;">
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-content">
@@ -582,51 +595,53 @@
                 <div id="history" class="is-hidden">
                     <p class="title is-3 has-text-centered" style="margin-top: 2vh;">История</p>
 
-                    <table class="table is-striped is-hoverable" style="width: 100%;">
-                        <thead>
-                            <tr>
-                                <th>Сайт</th>
-                                <th>Час</th>
-                                <th>Дата</th>
-                            </tr>
-                        </thead>
+                    <div style="overflow: auto;">
+                        <table class="table is-striped is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Сайт</th>
+                                    <th>Час</th>
+                                    <th>Дата</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr>
-                                <th>Сайт 1</th>
-                                <th>Час 1</th>
-                                <th>Дата 1</th>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th>Сайт 1</th>
+                                    <th>Час 1</th>
+                                    <th>Дата 1</th>
+                                </tr>
 
-                            <tr>
-                                <th>Сайт 2</th>
-                                <th>Час 2</th>
-                                <th>Дата 2</th>
-                            </tr>
+                                <tr>
+                                    <th>Сайт 2</th>
+                                    <th>Час 2</th>
+                                    <th>Дата 2</th>
+                                </tr>
 
-                            <tr>
-                                <th>Сайт 3</th>
-                                <th>Час 3</th>
-                                <th>Дата 3</th>
-                            </tr>
+                                <tr>
+                                    <th>Сайт 3</th>
+                                    <th>Час 3</th>
+                                    <th>Дата 3</th>
+                                </tr>
 
-                            <tr>
-                                <th>Сайт 4</th>
-                                <th>Час 4</th>
-                                <th>Дата 4</th>
-                            </tr>
+                                <tr>
+                                    <th>Сайт 4</th>
+                                    <th>Час 4</th>
+                                    <th>Дата 4</th>
+                                </tr>
 
-                            <tr>
-                                <th>Сайт 5</th>
-                                <th>Час 5</th>
-                                <th>Дата 5</th>
-                            </tr>
-                        </tbody>
-                    </table> <br><br>
+                                <tr>
+                                    <th>Сайт 5</th>
+                                    <th>Час 5</th>
+                                    <th>Дата 5</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br><br>
 
                     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                        <a class="pagination-previous" disabled>Следваща</a>
                         <a class="pagination-next" disabled>Предишна</a>
+                        <a class="pagination-previous" disabled>Следваща</a>
                         <ul class="pagination-list">
                             <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
                             <li><a class="pagination-link" aria-label="Goto page 2" disabled>2</a></li>
@@ -635,9 +650,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
-    </div>
     </div>
 
     <footer class="footer1">
@@ -682,7 +694,7 @@
         <br>
     </footer>
 
-    <script src="../js/tabs-script.js"></script>
+    <script src="{% static 'js/tabs-script.js' %}"></script>
 
 </body>
 
