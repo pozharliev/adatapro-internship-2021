@@ -1,4 +1,5 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 from django.views.generic import FormView
 from api.logInView.forms import LoginForm
 from django.contrib.auth import authenticate, login
@@ -18,4 +19,4 @@ class Login(FormView):
             login(request, user)
             return login_credentials
         else:
-            return JsonResponse({'type': 'unsuccessful-login'})
+            return render(request, 'templates/invalid_login.html', {'form': LoginForm})
