@@ -10,6 +10,8 @@ urlpatterns = [
     path('login/', include('api.logInView.urls')),
     path('', include('api.homeView.urls')),
     path('logout/', LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    path('account/', include('api.accountView.urls')),
+    path('info', include('api.informationView.urls'))
 
 
 ]
