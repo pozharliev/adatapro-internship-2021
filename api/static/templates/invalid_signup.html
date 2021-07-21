@@ -54,14 +54,15 @@
                             </span>
                             <span>Информация</span>
                         </a>
-                        <a href="https://github.com/ABPozharliev19/adatapro-internship-2021" class="navbar-item is-active">
+                        <a href="https://github.com/ABPozharliev19/adatapro-internship-2021"
+                            class="navbar-item is-active" target="_blank">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
                             <span>GitHub</span>
                         </a>
                     </div>
-                     {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="field is-grouped">
@@ -111,7 +112,7 @@
                                     </div>
                                 </div>
                                 {% endif %}
-                </div>
+                            </div>
             </nav>
         </div>
     </div>
@@ -134,11 +135,6 @@
                     <div class="notification is-danger">
                         Едно или повече полета са <strong>грешни</strong> !
                     </div>
-                    <!-- <article class="message is-danger">
-                        <div class="message-body">
-                            Едно или повече полета са <strong>грешни</strong> !
-                        </div>
-                    </article> -->
                 </div>
             </div>
         </div>
