@@ -22,9 +22,9 @@ class SignUp(FormView):
         if validation(username, email, password):
             try:
                 user = User.objects.create_user(username, email, password)
+                return redirection
             except IntegrityError:
-                return JsonResponse({'type': 'unsuccessful-register'})
-            return redirection
+                return render(request, 'templates/taken.html', {'form': SignUpForm})
         else:
-            return JsonResponse({'type': 'unsuccessful-register'})
+            return render(request, 'templates/invalid_signup.html', {'form': SignUpForm} )
 
