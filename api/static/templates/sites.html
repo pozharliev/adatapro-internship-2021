@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team RED | A Data Pro</title>
+    {% load static %}
+
+    <link rel="icon" href="{% static 'img/Tab-Icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer_style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <link rel="stylesheet" href="../css/debug.css"> -->
+
+    <style>
+        .profile_img1 {
+            background: rgb(104, 104, 215);
+            background: linear-gradient(140deg, rgba(104, 104, 215, 1) 0%, rgba(49, 196, 226, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first_nav">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="{% static 'img/logo-horizontal.png' %}" width="112" height="28">
+                    </a>
+                    <a class="navbar-item is-hidden-desktop">
+                        <span class="icon" style="color: #333;">
+                            <i class="fa fa-lg fa-envelope"></i>
+                        </span>
+                    </a>
+                    <!-- Mobile Menu -->
+                    <div class="navbar-burger burger" data-target="navMenuBlogHero">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div id="navMenuBlogHero" class="navbar-menu">
+                    <!-- Left Nav -->
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>Начало</span>
+                        </a>
+                        <a href="/info" class="navbar-item is-active">
+                            <span class="icon">
+                                <i class="fas fa-info"></i>
+                            </span>
+                            <span>Информация</span>
+                        </a>
+                        <a href="https://github.com/ABPozharliev19/adatapro-internship-2021"
+                            class="navbar-item is-active" target="_blank">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    {% if user.is_authenticated %}
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <p class="control">
+                                    <a href="/account">
+                                        <button class="button">
+                                            <span class="icon">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                            <span>{{ user.username}}</span>
+                                        </button>
+                                    </a>
+                                </p>
+
+                                <a href="/logout">
+                                    <button class="button is-info">
+                                        <span>Излизане</span>
+                                        <span class="icon">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                        </span>
+                                    </button>
+                                </a>
+                                {% endif%}
+
+                                {% if not user.is_authenticated %}
+                                <div class="navbar-end">
+                                    <div class="navbar-item">
+                                        <div class="field is-grouped">
+                                            <p class="control">
+                                                <a href="/signup">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-user-plus"></i>
+                                                        </span>
+                                                        <span>Регистрация</span>
+                                                    </button>
+                                                </a>
+
+                                                <a href="/login">
+                                                    <button class="button is-info">
+                                                        <span class="icon">
+                                                            <i class="fas fa-sign-in-alt"></i>
+                                                        </span>
+                                                        <span>Влизане</span>
+                                                    </button>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+
+    <div class="columns" style="margin-top: 3%; margin-bottom: 3%;">
+        <div class="column is-3" style="padding-left: 3%;">
+
+            <div class="panel is-info is-boxed is-centered"
+                style="position: -webkit-sticky; position: sticky; top: 5%;">
+
+                <p class="panel-heading">
+                    Контролен панел
+                </p>
+
+                <a href="account.html" class="panel-block">
+                    <span class="panel-icon is-small"><i class="fas fa-user"></i></span>
+                    <span>Профил</span>
+                </a>
+
+                <a href="users.html" class="panel-block">
+                    <span class="panel-icon is-small"><i class="fas fa-users"></i></span>
+                    <span>Потребители</span>
+                </a>
+
+                <a href="sites.html" class="panel-block">
+                    <span class="panel-icon is-small"><i class="fas fa-search"></i></span>
+                    <span>Следене</span>
+                </a>
+
+                <a href="history.html" class="panel-block">
+                    <span class="panel-icon is-small"><i class="fas fa-history"></i></span>
+                    <span>История</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Следене</p><br><br>
+
+            <div class="columns" style="margin-right: 2%; margin-left: 2%;">
+                <div class="card column" style="margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">ardes.bg</p>
+                                <a href="https://ardes.bg" target="_blank">
+                                    ardes.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="ardes" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noArdes" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="card column" style="margin-left: 2%; margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">ozone.bg</p>
+                                <a href="https://ozone.bg" target="_blank">
+                                    ozone.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="Ozone" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noOzone" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div class="columns" style="margin-right: 2%; margin-left: 2%;">
+                <div class="card column" style="margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">laptop.bg</p>
+                                <a href="https://laptop.bg" target="_blank">
+                                    laptop.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="laptop" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noLaptop" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="card column" style="margin-left: 2%; margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Plesio</p>
+                                <a href="https://plesio.bg" target="_blank">
+                                    plesio.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="plesio" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noplesio" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div class="columns" style="margin-right: 2%; margin-left: 2%;">
+                <div class="card column" style="margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">eMAG</p>
+                                <a href="https://emag.bg" target="_blank">
+                                    emag.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="emag" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noEmag" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="card column" style="margin-left: 2%; margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">also.bg</p>
+                                <a href="http://also.bg/" target="_blank">
+                                    also.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="also" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noAlso" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div class="columns" style="margin-right: 2%; margin-left: 2%;">
+                <div class="card column" style="margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">JAR Computers</p>
+                                <a href="http://jarcomputers.com/" target="_blank">
+                                    jarcomputers.com <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="jarcomputers" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noJarcomputers" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="card column" style="margin-left: 2%; margin-top: 2%;">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">PolyComp</p>
+                                <a href="https://polycomp.bg/" target="_blank">
+                                    polycomp.bg <span><i class="fas fa-external-link-alt"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="content">
+                                <button name="polycomp" class="button is-success">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span>Следи</span>
+                                </button>
+                                <button name="noPolycomp" class="button is-danger">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Не следи</span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div><br>
+        </div>
+    </div>
+
+    <footer class="footer1">
+        <div class="container1">
+            <div class="row1">
+                <div class="footer1-col">
+                    <h4>За сайта</h4>
+                    <p>Този уебсайт има за цел да помогне на хората с намирането на PlayStation
+                        5, изпращайки имайл на
+                        потребителите, къде има наличноси на PlayStation 5.</p>
+                </div>
+
+                <div class="footer1-col">
+                    <h4>Социални мрежи</h4>
+                    <div style="margin-left: 7%;">
+                        <a href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
+                        <a href="https://github.com/ABPozharliev19/adatapro-internship-2021" target="_blank"
+                            style="margin-left: 7%;"><i class="fab fa-2x fa-github"></i></a>
+                        <a href="#" style="margin-left: 7%;"><i class="fab fa-2x fa-instagram"></i></a>
+                        <a href="#" style="margin-left: 7%;"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer1-col">
+                    <h4>Бързи връзки</h4>
+                    <ul>
+                        <a href="#">Начало</a></li>
+                        <a href="#">Информация</a></li>
+                        <a href="#">Влизане</a></li>
+                        <a href="#">Регистрация</a></li>
+                        <a href="https://github.com/ABPozharliev19/adatapro-internship-2021" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><br>
+        <div>
+            <div class="has-text-centered">
+                <p> &copy; 2021 - RED Team</p>
+            </div>
+        </div>
+        <br>
+    </footer>
+
+</body>
+
+</html>
