@@ -170,8 +170,8 @@
             </div>
         </div>
 
-        <div class="column" style="padding-right: 3%;">
-            <div id="tab-content" class="box">
+        <div id="tab-content" class="column" style="padding-right: 3%;">
+            <div class="box">
                 <div id="profile-info">
                     <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Профил</p>
                     <div class="columns">
@@ -439,10 +439,10 @@
                 </div><br>
             </div>
 
-            <div id="users" class="is-hidden">
+            <div id="users" class="is-hidden box">
                 <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Потребители</p><br>
 
-                <div style="overflow: auto;">
+                <div style="overflow: auto;margin-left: 5%; margin-right: 5%;">
                     <table class="table is-striped is-hoverable is-fullwidth">
                         <thead>
                             <tr>
@@ -539,7 +539,7 @@
                 </nav>
             </div>
 
-            <div id="sites" class="is-hidden">
+            <div id="sites" class="is-hidden box">
                 <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Следене</p><br><br>
 
                 <div class="columns" style="margin-right: 2%; margin-left: 2%;">
@@ -554,20 +554,23 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="ardes" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noArdes" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
 
@@ -582,20 +585,23 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="Ozone" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noOzone" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div><br><br>
@@ -612,20 +618,22 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="laptop" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noLaptop" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
 
                         </div>
                     </div>
@@ -641,20 +649,23 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="plesio" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noplesio" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div><br><br>
@@ -671,20 +682,23 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="emag" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noEmag" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
 
@@ -699,20 +713,22 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="also" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noAlso" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
 
                         </div>
                     </div>
@@ -730,20 +746,23 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="jarcomputers" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noJarcomputers" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
 
@@ -758,30 +777,33 @@
                                 </div>
                             </div>
 
-                            <div class="content">
-                                <button class="button is-success">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                    <span>Следи</span>
-                                </button>
-                                <button class="button is-danger">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>Не следи</span>
-                                </button>
-                            </div>
+                            <form method="POST">
+                                <div class="content">
+                                    <button name="polycomp" class="button is-success">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Следи</span>
+                                    </button>
+                                    <button name="noPolycomp" class="button is-danger">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span>Не следи</span>
+                                    </button>
+                                </div>
+                            </form>
 
                         </div>
                     </div>
                 </div><br>
             </div>
 
-            <div id="history" class="is-hidden">
-                <p class="title is-3 has-text-centered" style="margin-top: 2vh;">История</p>
+            <div id="history" class="is-hidden box">
+                <p class="title is-3 has-text-centered" style="margin-top: 2vh;">
+                    История</p>
 
-                <div style="overflow: auto;">
+                <div style="overflow: auto; margin-left: 5%; margin-right: 5%;">
                     <table class="table is-striped is-hoverable is-fullwidth">
                         <thead>
                             <tr>
