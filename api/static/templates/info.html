@@ -139,6 +139,149 @@
         </p>
     </div><br><br>
 
+    <div>
+        <div class="tabs is-toggle is-centered">
+            <ul>
+                <li class="is-active" data-target="signup">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-user-plus"></i></span>
+                        <span>Регистрация</span>
+                    </a>
+                </li>
+                <li data-target="login">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-sign-in-alt"></i></span>
+                        <span>Влизане</span>
+                    </a>
+                </li>
+                <li data-target="account">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-user"></i></span>
+                        <span>Акаунт</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="tab-content">
+            <div id="signup">
+                <div class="columns box" style="max-width: 80%; margin-left: 10%; margin-top: 3%;">
+                    <div class="column">
+                        <img src="{% static 'img/signup_img.png' %}">
+                    </div>
+                    <div class="column">
+
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-home" aria-hidden="true"></i>
+                                        </span>
+                                        <span>Начало</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-user-plus"></i>
+                                        </span>
+                                        <span>Регистрация</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <p>Нашата страница за регистрация е направена да не затруднява потребителя с правенето на свой
+                            акаунт и иска да бъдат коректно попълнени трите полета с потребителско име, електронна поща
+                            и парола. Страницата може да бъде достъпена от всяка една друга страница на сайта, ако
+                            потребителят не е влязъл в акаунта си.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="login" class="is-hidden">
+                <div class="columns box" style="max-width: 80%; margin-left: 10%; margin-top: 3%;">
+                    <div class="column">
+                        <img src="{% static 'img/login_img.png' %}">
+                    </div>
+                    <div class="column">
+
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-home" aria-hidden="true"></i>
+                                        </span>
+                                        <span>Начало</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                        </span>
+                                        <span>Влизане</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <p>Нашата страница за влизане в системата е направена да не затруднява потребителя с влизането в
+                            каунта си и иска да бъдат коректно попълнени две полета с потребителско име и
+                            и парола. Страницата може да бъде достъпена от всяка друга една страница на сайта, ако
+                            потребителят не е влязъл в акаунта си.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="account" class="is-hidden">
+                <div class="columns box" style="max-width: 80%; margin-left: 10%; margin-top: 3%;">
+                    <div class="column">
+                        <img src="{% static 'img/account_img.png' %}">
+                    </div>
+                    <div class="column">
+
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-home" aria-hidden="true"></i>
+                                        </span>
+                                        <span>Начало</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <span>Акаунт</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <p>Страницата акаунт е направена с инфромация за текущия потребител в системата. Тя е достъпна
+                            от всяка друга страница, ако потребителят е влязъл в акаунта си. Първото, което посреща
+                            потребителя е информацията, с която се е рагистрирал и няколко опции: за редактиране на
+                            акаунта, смяна на паролата, смяна на имейла и изтреиване на акаунта. С цел сигутност на
+                            потребителя, за да се извърши някое от тези действия е нужно използването на актуалната за
+                            профила парола. Натискайки на бутона "Следене" ще се поакажат сайтовете, от които нашият
+                            сайт взима информация за наличностите на PlayStation 5. Потребителят може да си избере, за
+                            кои сайтове да получава съобщения при засечена наличност. А след натискане на бутона
+                            "История" ще вдите списък с информация, кога и къде е имао налична игралната конзола.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div><br><br>
+
     <footer class="footer1">
         <div class="container1">
             <div class="row1">
@@ -180,6 +323,8 @@
         </div>
         <br>
     </footer>
+
+    <script src="{% static 'js/tabs.js' %}"></script>
 
 </body>
 
