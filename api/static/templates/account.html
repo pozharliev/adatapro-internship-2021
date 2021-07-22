@@ -171,8 +171,8 @@
         </div>
 
         <div id="tab-content" class="column" style="padding-right: 3%;">
-            <div class="box">
-                <div id="profile-info">
+            <div class="box" id="profile-info">
+                <div>
                     <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Профил</p>
                     <div class="columns">
                         <div class="column">
@@ -230,7 +230,7 @@
 
                             <ul style="display: flex;">
 
-                                <li style="margin-right: 3%; margin-top: 2%;" class="is-active" data-target="edit">
+                                <li style="margin-right: 3%; margin-top: 2%;" data-target="edit">
                                     <button class="button is-danger">
                                         <span>Редактиране</span>
                                         <span class="icon is-small">
@@ -269,176 +269,211 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div id="edit" class="is-hidden"><br>
-                    <h1 class="title has-text-centered">
-                        Редактиране
-                    </h1><br><br>
-                    <div style="width: 50%; margin-left: 25%;">
-                        <form>
-                            <div class="field">
-                                <label class="label" id="username">
-                                    Ново потребителско име
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="text" for="username" placeholder="Mitko12">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                                </div>
+            <div id="edit" class="is-hidden box"><br>
+                <h1 class="title has-text-centered">
+                    Редактиране
+                </h1><br><br>
+                <div style="width: 50%; margin-left: 25%;">
+                    <form>
+                        <div class="field">
+                            <label class="label" id="username">
+                                Ново потребителско име
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" for="username" placeholder="Mitko12">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div><br>
+
+                        <div class="field">
+                            <label class="label" id="password">
+                                Парола
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" for="password" placeholder="********">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
                             </div><br>
-
-                            <div class="field">
-                                <label class="label" id="password">
-                                    Парола
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="password" for="password" placeholder="********">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div><br>
-
-                                <div class="buttons">
-                                    <button class="button is-link">
-                                        Запази
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div><br>
-                </div>
-
-                <div id="new_pass" class="is-hidden"><br>
-                    <h1 class="title has-text-centered">
-                        Смяна на паролата
-                    </h1><br><br>
-                    <div style="width: 50%; margin-left: 25%;">
-                        <form>
-                            <div class="field">
-                                <label class="label" id="password">
-                                    Стара парола
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="text" for="password" placeholder="********">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div>
-                            </div><br>
-
-                            <div class="field">
-                                <label class="label" id="password">
-                                    Нова парола
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="password" for="password" placeholder="********">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div><br>
-
-                                <div class="buttons">
-                                    <button class="button is-link">
-                                        Запази
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div><br>
-                </div>
-
-                <div id="new_email" class="is-hidden"><br>
-                    <h1 class="title has-text-centered">
-                        Смяна на имаейла
-                    </h1><br><br>
-                    <div style="width: 50%; margin-left: 25%;">
-                        <form>
-                            <div class="field">
-                                <label class="label" id="email">
-                                    Нов имейл адрес
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="text" for="email" placeholder="Mitko43@adatapro.bg">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                </div>
-                            </div><br>
-
-                            <div class="field">
-                                <label class="label" id="password">
-                                    Парола
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="password" for="password" placeholder="********">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div><br>
-
-                                <div class="buttons">
-                                    <button class="button is-link">
-                                        Запази
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div><br>
-                </div>
-
-                <div id="delete" class="is-hidden"><br>
-                    <h1 class="title has-text-centered">
-                        Изтриване на акаунт
-                    </h1><br><br>
-                    <div style="width: 50%; margin-left: 25%;">
-                        <form>
-                            <div class="field">
-                                <label class="label" id="username">
-                                    Потребителско име
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="text" for="username" placeholder="Mitko12">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                                </div>
-                            </div><br>
-
-                            <div class="field">
-                                <label class="label" id="password">
-                                    Парола
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="password" for="password" placeholder="********">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div><br>
-                            </div>
-
-                            <div class="field">
-                                <label class="label" id="password">
-                                    Парола
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input class="input" type="password" for="password" placeholder="********">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
-                                    </span>
-                                </div><br>
-                            </div>
 
                             <div class="buttons">
-                                <button class="button is-danger">
-                                    Изтрий
-                                </button>
+                                <ul style="display: flex;">
+                                    <li>
+                                        <button class="button is-danger">
+                                            Запази
+                                        </button>
+                                    </li>
+                                    <li data-target="profile-info">
+                                        <button class="button is-link" style="margin-left: 15%;">
+                                            Отказ
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
-                    </div>
+                        </div>
                     </form>
                 </div><br>
             </div>
 
+            <div id="new_pass" class="is-hidden box"><br>
+                <h1 class="title has-text-centered">
+                    Смяна на паролата
+                </h1><br><br>
+                <div style="width: 50%; margin-left: 25%;">
+                    <form>
+                        <div class="field">
+                            <label class="label" id="password">
+                                Стара парола
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" for="password" placeholder="********">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                        </div><br>
+
+                        <div class="field">
+                            <label class="label" id="password">
+                                Нова парола
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" for="password" placeholder="********">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div><br>
+
+                            <div class="buttons">
+                                <ul style="display: flex;">
+                                    <li>
+                                        <button class="button is-danger">
+                                            Запази
+                                        </button>
+                                    </li>
+                                    <li data-target="profile-info">
+                                        <button class="button is-link" style="margin-left: 15%;">
+                                            Отказ
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div><br>
+            </div>
+
+            <div id="new_email" class="is-hidden box"><br>
+                <h1 class="title has-text-centered">
+                    Смяна на имаейла
+                </h1><br><br>
+                <div style="width: 50%; margin-left: 25%;">
+                    <form>
+                        <div class="field">
+                            <label class="label" id="email">
+                                Нов имейл адрес
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" for="email" placeholder="Mitko43@adatapro.bg">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div><br>
+
+                        <div class="field">
+                            <label class="label" id="password">
+                                Парола
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" for="password" placeholder="********">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div><br>
+
+                            <div class="buttons">
+                                <ul style="display: flex;">
+                                    <li>
+                                        <button class="button is-danger">
+                                            Запази
+                                        </button>
+                                    </li>
+                                    <li data-target="profile-info">
+                                        <button class="button is-link" style="margin-left: 15%;">
+                                            Отказ
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div><br>
+            </div>
+
+            <div id="delete" class="is-hidden box"><br>
+                <h1 class="title has-text-centered">
+                    Изтриване на акаунт
+                </h1><br><br>
+                <div style="width: 50%; margin-left: 25%;">
+                    <form>
+                        <div class="field">
+                            <label class="label" id="username">
+                                Потребителско име
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" for="username" placeholder="Mitko12">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div><br>
+
+                        <div class="field">
+                            <label class="label" id="password">
+                                Парола
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" for="password" placeholder="********">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div><br>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" id="password">
+                                Парола
+                            </label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" for="password" placeholder="********">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div><br>
+                        </div>
+
+                        <div class="buttons">
+                            <ul style="display: flex;">
+                                <li>
+                                    <button class="button is-danger is-outlined">
+                                        Запази
+                                    </button>
+                                </li>
+                                <li data-target="profile-info">
+                                    <button class="button is-link" style="margin-left: 15%;">
+                                        Отказ
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                </form><br>
+            </div>
             <div id="users" class="is-hidden box">
                 <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Потребители</p><br>
 
