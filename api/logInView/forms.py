@@ -1,5 +1,5 @@
+from django.contrib.auth.models import User
 from django.forms import ModelForm
-from api.signUpView.models import Profile
 from django import forms
 
 
@@ -12,5 +12,5 @@ class LoginForm(ModelForm):
                                                                  'placeholder': '********'}))
 
     class Meta:
-        model = Profile
+        model = User
         fields = ['username', 'password']

@@ -1,5 +1,4 @@
 from django.forms import ModelForm
-from api.signUpView.models import Profile
 from django import forms
 from django.contrib.auth.models import User
 
