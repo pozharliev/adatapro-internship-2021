@@ -4,7 +4,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import FormView
 from django.contrib.auth.models import User
 from api.helpers.validations import validation
-from django.http import JsonResponse
+from ..accountView.models import ProfilePreferences
 
 from api.signUpView.forms import SignUpForm
 
@@ -22,9 +22,11 @@ class SignUp(FormView):
         if validation(username, email, password):
             try:
                 user = User.objects.create_user(username, email, password)
+                preferences = ProfilePreferences(profile_username=user)
+                preferences.save()
                 return redirection
             except IntegrityError:
                 return render(request, 'templates/taken.html', {'form': SignUpForm})
         else:
-            return render(request, 'templates/invalid_signup.html', {'form': SignUpForm} )
+            return render(request, 'templates/invalid_signup.html', {'form': SignUpForm})
 

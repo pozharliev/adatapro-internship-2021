@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'api.logInView',
     'api.signUpView.successfulSignUpView',
     'api.helpers',
+    'api.accountView',
+    'api.informationView'
 ]
 
 MIDDLEWARE = [

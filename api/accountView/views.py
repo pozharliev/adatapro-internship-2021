@@ -10,3 +10,4 @@ class AccountView(TemplateView):
             return super(AccountView, self).get(self,request, *args, **kwargs)
         else:
             return redirect('/login')
+
