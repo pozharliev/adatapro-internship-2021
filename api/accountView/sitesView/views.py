@@ -1,18 +1,14 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import TemplateView
 
 from api.helpers.preferences import choose_preference
 
 
-class SitesView(View):
+class SitesView(LoginRequiredMixin, TemplateView):
     template_name = 'templates/sites.html'
-
-    def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return render(request, self.template_name)
-        else:
-            return redirect('/login')
 
     # SPAGHETTI CODE WARNING!
 
@@ -55,7 +51,7 @@ class SitesView(View):
 
         elif request.POST['preference'] == 'polycomp':
             choose_preference(request, 'want_polycomp', 1)
-        elif request.POST['preference'] == 'noPolycomp':
+        else:
             choose_preference(request, 'want_polycomp', 0)
 
 
