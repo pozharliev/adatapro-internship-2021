@@ -1,11 +1,13 @@
-from ..accountView.models import ProfilePreferences
+from django.db import connection
 
 
 def choose_preference(request, site, wish):
-    ProfilePreferences.objects.raw(f"""
-        UPDATE accountview_profilepreferences
-        SET {site} = {wish}
-        WHERE profile_username_id = {request.user.id}
-    """)
+    with connection.cursor() as cursor:
+        cursor.execute(f"""
+            UPDATE accountview_profilepreferences
+            SET {site} = {wish}
+            WHERE profile_username_id = {request.user.id}
+            """)
+
 
 
