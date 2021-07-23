@@ -140,138 +140,79 @@
                     Контролен панел
                 </p>
 
-                <a href="account.html" class="panel-block">
+                <a href="../account.html" class="panel-block">
                     <span class="panel-icon is-small"><i class="fas fa-user"></i></span>
                     <span>Профил</span>
                 </a>
 
-                <a href="users.html" class="panel-block">
+                <a href="../users.html" class="panel-block">
                     <span class="panel-icon is-small"><i class="fas fa-users"></i></span>
                     <span>Потребители</span>
                 </a>
 
-                <a href="sites.html" class="panel-block">
+                <a href="../sites.html" class="panel-block">
                     <span class="panel-icon is-small"><i class="fas fa-search"></i></span>
                     <span>Следене</span>
                 </a>
 
-                <a href="history.html" class="panel-block">
+                <a href="../history.html" class="panel-block">
                     <span class="panel-icon is-small"><i class="fas fa-history"></i></span>
                     <span>История</span>
                 </a>
             </div>
         </div>
 
-        <div class="column" style="padding-right: 3%;">
-            <div class="box" id="profile-info">
-                <div>
-                    <p class="title is-3 has-text-centered" style="margin-top: 2vh;">Профил</p>
-                    <div class="columns">
-                        <div class="column">
-                            <div style="margin: 15%;">
-                                <img class="profile_img1" src="{% static 'img/user-icon.png' %}"
-                                    style="width: 60%; border-radius: 550px; margin-left: 20%;"> <br><br>
-
-                                <p class="title is-4 has-text-centered">{{ user.username}}</p>
-                                <p class="has-text-centered" style="margin-top: -5%;">{{ user.email}}</p><br>
-                            </div>
+        <div id="new_email" class="is-hidden box"><br>
+            <h1 class="title has-text-centered">
+                Смяна на имаейла
+            </h1><br><br>
+            <div style="width: 50%; margin-left: 25%;">
+                <form>
+                    <div class="field">
+                        <label class="label" id="email">
+                            Нов имейл адрес
+                        </label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" for="email" placeholder="Mitko43@adatapro.bg">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
                         </div>
+                    </div><br>
 
-                        <div class="column" style="margin-right: 5%;">
-                            <p class="title is-4" style="margin-top: 15%;">Известия</p>
+                    <div class="field">
+                        <label class="label" id="password">
+                            Парола
+                        </label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="password" for="password" placeholder="********">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div><br>
 
-                            <div>
-                                <table class="table is-striped is-hoverable is-fullwidth">
-                                    <thead>
-                                        <tr>
-                                            <th>Известие</th>
-                                            <th>Час</th>
-                                            <th>Дата</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <th>Известие 1</th>
-                                            <th>Час 1</th>
-                                            <th>Дата 1</th>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Известие 1</th>
-                                            <th>Час 1</th>
-                                            <th>Дата 1</th>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Известие 1</th>
-                                            <th>Час 1</th>
-                                            <th>Дата 1</th>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="message is-danger">
-                        <div class="message-header">
-                            <p>Опасна зона</p>
-                        </div>
-                        <div class="message-body panel">
-                            <p>Действията в тази зона могат да бъдат <strong>опасни</strong>!</p><br>
-
+                        <div class="buttons">
                             <ul style="display: flex;">
-
-                                <li style="margin-right: 3%; margin-top: 2%;">
-                                    <a href="account_options/edit.html" style="text-decoration: none;">
-                                        <button class="button is-danger">
-                                            <span>Редактиране</span>
-                                            <span class="icon is-small">
-                                                <i class="far fa-edit"></i>
-                                            </span>
-                                        </button></a>
+                                <li>
+                                    <button class="button is-danger">
+                                        Запази
+                                    </button>
                                 </li>
-
-                                <li style="margin-right: 3%; margin-top: 2%;">
-                                    <a href="account_options/new_password.html" style="text-decoration: none;">
-                                        <button class="button is-danger">
-                                            <span>Смяна на паролата</span>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-lock"></i>
-                                            </span>
-                                        </button>
-                                    </a>
-                                </li>
-
-                                <li style="margin-right: 3%; margin-top: 2%;">
-                                    <a href="account_options/new_email.html" style="text-decoration: none;">
-                                        <button id="btn" class="button is-danger">
-                                            <span>Смяна на имайла</span>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-envelope"></i>
-                                            </span>
-                                        </button>
-                                    </a>
-                                </li>
-
-                                <li style="margin-top: 2%;">
-                                    <a href="account_options/delete.html" style="text-decoration: none;">
-                                        <button class="button is-danger is-outlined">
-                                            <span>Изтриване на акаунт</span>
-                                            <span class="icon is-small">
-                                                <i class="fas fa-user-times"></i>
-                                            </span>
+                                <li>
+                                    <a href="../account.html">
+                                        <button class="button is-link" style="margin-left: 15%;">
+                                            Отказ
                                         </button>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
+                </form>
+            </div><br>
         </div>
-        <br>
     </div>
+    <br>
 
     <footer class="footer1">
         <div class="container1">
