@@ -1,9 +1,8 @@
 from django.contrib.auth.models import User
-from django.forms import ModelForm
 from django import forms
 
 
-class LoginForm(ModelForm):
+class LoginForm(forms.Form):
     username = forms.CharField(label="Потребителско име", max_length=64,
                                widget=forms.TextInput(attrs={'class': 'input mr',
                                                              'placeholder': 'Mitko123'}))
@@ -12,5 +11,4 @@ class LoginForm(ModelForm):
                                                                  'placeholder': '********'}))
 
     class Meta:
-        model = User
         fields = ['username', 'password']
