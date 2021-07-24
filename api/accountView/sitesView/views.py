@@ -1,4 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 
@@ -12,42 +14,12 @@ class SitesView(LoginRequiredMixin, TemplateView):
 
     @csrf_exempt
     def post(self, request, *args, **kwargs):
-        if request.POST['preference'] == 'ardes':
-            choose_preference(request, 'want_ardes', 1)
-        elif request.POST['preference'] == 'noArdes':
-            choose_preference(request, 'want_ardes', 0)
+        want_status = {
+            True: 0,
+            False: 1
+        }
+        site_name = 'want_{}'.format(request.POST['preference'].replace('no', '').lower())
+        selected_preference = want_status[request.POST['preference'].startswith('no')]
+        choose_preference(request, site_name, selected_preference)
 
-        elif request.POST['preference'] == 'laptop':
-            choose_preference(request, 'want_laptop', 1)
-        elif request.POST['preference'] == 'noLaptop':
-            choose_preference(request, 'want_laptop', 0)
-
-        elif request.POST['preference'] == 'ozone':
-            choose_preference(request, 'want_ozone', 1)
-        elif request.POST['preference'] == 'no0zone':
-            choose_preference(request, 'want_ozone', 0)
-
-        elif request.POST['preference'] == 'plesio':
-            choose_preference(request, 'want_plesio', 1)
-        elif request.POST['preference'] == 'noPlesio':
-            choose_preference(request, 'want_plesio', 0)
-
-        elif request.POST['preference'] == 'emag':
-            choose_preference(request, 'want_emag', 1)
-        elif request.POST['preference'] == 'noEmag':
-            choose_preference(request, 'want_emag', 0)
-
-        elif request.POST['preference'] == 'also':
-            choose_preference(request, 'want_also', 1)
-        elif request.POST['preference'] == 'noAlso':
-            choose_preference(request, 'want_also', 0)
-
-        elif request.POST['preference'] == 'jarcomputers':
-            choose_preference(request, 'want_jar', 1)
-        elif request.POST['preference'] == 'noJarcomputers':
-            choose_preference(request, 'want_jar', 0)
-
-        elif request.POST['preference'] == 'polycomp':
-            choose_preference(request, 'want_polycomp', 1)
-        else:
-            choose_preference(request, 'want_polycomp', 0)
+        return HttpResponseRedirect(reverse_lazy('account:sites'))
