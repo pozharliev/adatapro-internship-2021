@@ -1,6 +1,5 @@
 from django.db import IntegrityError
-from django.shortcuts import render, redirect
-from django.urls import reverse, reverse_lazy
+from django.shortcuts import render
 from django.views.generic import FormView
 from django.contrib.auth.models import User
 from api.helpers.validations import validation
@@ -29,4 +28,3 @@ class SignUp(FormView):
                 return render(request, 'templates/taken.html', {'form': SignUpForm})
         else:
             return render(request, 'templates/invalid_signup.html', {'form': SignUpForm})
-
