@@ -8,6 +8,3 @@ def choose_preference(request, site, wish):
             SET {site} = {wish}
             WHERE profile_username_id = {request.user.id}
             """)
-
-
-

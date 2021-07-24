@@ -9,5 +9,4 @@ urlpatterns = [
     path('sites/', SitesView.as_view()),
     path('history/', HistoryView.as_view()),
     path('users/', UsersView.as_view()),
-
 ]

@@ -1,6 +1,4 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect, render
-from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 
@@ -53,5 +51,3 @@ class SitesView(LoginRequiredMixin, TemplateView):
             choose_preference(request, 'want_polycomp', 1)
         else:
             choose_preference(request, 'want_polycomp', 0)
-
-
