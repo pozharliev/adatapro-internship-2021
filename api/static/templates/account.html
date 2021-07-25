@@ -192,24 +192,17 @@
                                     </thead>
 
                                     <tbody>
-                                        <tr>
-                                            <th>Известие 1</th>
-                                            <th>Час 1</th>
-                                            <th>Дата 1</th>
-                                        </tr>
+                        {% for unit in object_list %}
+                        <tr>
+                            <a href="{{ unit.site_link  }}">
+                                <th>{{ unit.site}}</th>
+                            </a>
+                            <th>{{ unit.price }}</th>
+                            <th>{{ unit.date }}</th>
+                        </tr>
+                        {% endfor %}
 
-                                        <tr>
-                                            <th>Известие 1</th>
-                                            <th>Час 1</th>
-                                            <th>Дата 1</th>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Известие 1</th>
-                                            <th>Час 1</th>
-                                            <th>Дата 1</th>
-                                        </tr>
-                                    </tbody>
+                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -234,7 +227,7 @@
                                 </li>
 
                                 <li style="margin-right: 3%; margin-top: 2%;">
-                                    <a href="account_options/new_password.html" style="text-decoration: none;">
+                                    <a href="change-password/" style="text-decoration: none;">
                                         <button class="button is-danger">
                                             <span>Смяна на паролата</span>
                                             <span class="icon is-small">
@@ -245,7 +238,7 @@
                                 </li>
 
                                 <li style="margin-right: 3%; margin-top: 2%;">
-                                    <a href="account_options/new_email.html" style="text-decoration: none;">
+                                    <a href="change-email/" style="text-decoration: none;">
                                         <button id="btn" class="button is-danger">
                                             <span>Смяна на имайла</span>
                                             <span class="icon is-small">
@@ -256,7 +249,7 @@
                                 </li>
 
                                 <li style="margin-top: 2%;">
-                                    <a href="account_options/delete.html" style="text-decoration: none;">
+                                    <a href="delete-account/" style="text-decoration: none;">
                                         <button class="button is-danger is-outlined">
                                             <span>Изтриване на акаунт</span>
                                             <span class="icon is-small">
