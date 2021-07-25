@@ -31,7 +31,7 @@
   
 <h1>⌨️ How it works</h1>
   
-<p>Our work can be split into 4 different parts</p>
+<p>Our work can be split into 4 different parts: </p>
   
 <ol>
   
