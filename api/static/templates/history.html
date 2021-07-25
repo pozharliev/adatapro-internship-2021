@@ -179,77 +179,87 @@
                     </thead>
 
                     <tbody>
-                    {% for unit in object_list  %}
+                        {% for unit in object_list %}
                         <tr>
-                            <a href = "{{ unit.site_link  }}"><th>{{ unit.site}}</th></a>
+                            <a href="{{ unit.site_link  }}">
+                                <th>{{ unit.site}}</th>
+                            </a>
                             <th>{{ unit.price }}</th>
                             <th>{{ unit.date }}</th>
                         </tr>
-                                    {% endfor %}
+                        {% endfor %}
 
                     </tbody>
                 </table>
             </div><br><br>
 
+            <nav class="pagination is-centered" style="margin-left: 35%;">
+                <div>
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                        <a class="pagination-previous" href="?page=1"
+                            style="background-color: hsl(204, 86%, 53%); color: white;">&laquo; first</a>
+                        <a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}"
+                            style="background-color: hsl(204, 86%, 53%); color: white;">&laquo;
+                            previous</a>
+                        {% endif %}
 
-            <div class="pagination">
-    <span class="step-links">
-        {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-        {% endif %}
+                        <span class="current pagination-link">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
 
-        <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-        </span>
-
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-    </span>
-</div>
-    <footer class="footer1">
-        <div class="container1">
-            <div class="row1">
-                <div class="footer1-col">
-                    <h4>За сайта</h4>
-                    <p>Този уебсайт има за цел да помогне на хората с намирането на PlayStation
-                        5, изпращайки имайл на
-                        потребителите, къде има наличноси на PlayStation 5.</p>
+                        {% if page_obj.has_next %}
+                        <a class="pagination-next" href="?page={{ page_obj.next_page_number }}"
+                            style="background-color: hsl(204, 86%, 53%); color: white;">next &raquo;</a>
+                        <a class="pagination-next" href="?page={{ page_obj.paginator.num_pages }}"
+                            style="background-color: hsl(204, 86%, 53%); color: white;">last &raquo;</a>
+                        {% endif %}
+                    </span>
                 </div>
+            </nav>
 
-                <div class="footer1-col">
-                    <h4>Социални мрежи</h4>
-                    <div style="margin-left: 7%;">
-                        <a href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
-                        <a href="https://github.com/ABPozharliev19/adatapro-internship-2021" target="_blank"
-                            style="margin-left: 7%;"><i class="fab fa-2x fa-github"></i></a>
-                        <a href="#" style="margin-left: 7%;"><i class="fab fa-2x fa-instagram"></i></a>
-                        <a href="#" style="margin-left: 7%;"><i class="fab fa-2x fa-linkedin-in"></i></a>
+
+            <footer class="footer1">
+                <div class="container1">
+                    <div class="row1">
+                        <div class="footer1-col">
+                            <h4>За сайта</h4>
+                            <p>Този уебсайт има за цел да помогне на хората с намирането на PlayStation
+                                5, изпращайки имайл на
+                                потребителите, къде има наличноси на PlayStation 5.</p>
+                        </div>
+
+                        <div class="footer1-col">
+                            <h4>Социални мрежи</h4>
+                            <div style="margin-left: 7%;">
+                                <a href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
+                                <a href="https://github.com/ABPozharliev19/adatapro-internship-2021" target="_blank"
+                                    style="margin-left: 7%;"><i class="fab fa-2x fa-github"></i></a>
+                                <a href="#" style="margin-left: 7%;"><i class="fab fa-2x fa-instagram"></i></a>
+                                <a href="#" style="margin-left: 7%;"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer1-col">
+                            <h4>Бързи връзки</h4>
+                            <ul>
+                                <li><a href="#">Начало</a></li>
+                                <li><a href="#">Информация</a></li>
+                                <li><a href="#">Влизане</a></li>
+                                <li><a href="#">Регистрация</a></li>
+                                <li><a href="https://github.com/ABPozharliev19/adatapro-internship-2021"
+                                        target="_blank">GitHub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><br>
+                <div>
+                    <div class="has-text-centered">
+                        <p> &copy; 2021 - RED Team</p>
                     </div>
                 </div>
-
-                <div class="footer1-col">
-                    <h4>Бързи връзки</h4>
-                    <ul>
-                        <li><a href="#">Начало</a></li>
-                        <li><a href="#">Информация</a></li>
-                        <li><a href="#">Влизане</a></li>
-                        <li><a href="#">Регистрация</a></li>
-                        <li><a href="https://github.com/ABPozharliev19/adatapro-internship-2021"
-                                target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div><br>
-        <div>
-            <div class="has-text-centered">
-                <p> &copy; 2021 - RED Team</p>
-            </div>
-        </div>
-        <br>
-    </footer>
+                <br>
+            </footer>
 
 </body>
 
