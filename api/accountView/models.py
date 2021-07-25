@@ -3,7 +3,7 @@ from django.db import models
 
 
 class ProfilePreferences(models.Model):
-    profile_username = models.ForeignKey(User, unique=True, on_delete=models.CASCADE)
+    profile_username = models.OneToOneField(User, unique=True, on_delete=models.CASCADE)
     want_laptop = models.BooleanField(default=True)
     want_polycomp = models.BooleanField(default=True)
     want_jar = models.BooleanField(default=True)
