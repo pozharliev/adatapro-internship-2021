@@ -115,4 +115,4 @@ python manage.py runserver
 <code>
 python manage.py runserver PORT
 </code>
-<h2>Step 7: Go to localhost and use the site!</h2>
+<h2>Step 7: Go to localhost:PORT and use the site!</h2>
