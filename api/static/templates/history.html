@@ -179,38 +179,18 @@
                     </thead>
 
                     <tbody>
+                    {% for unit in object_list  %}
                         <tr>
-                            <th>Сайт 1</th>
-                            <th>Цена 1</th>
-                            <th>Дата 1</th>
+                            <a href = "{{ unit.site_link  }}"><th>{{ unit.site}}</th></a>
+                            <th>{{ unit.price }}</th>
+                            <th>{{ unit.date }}</th>
                         </tr>
 
-                        <tr>
-                            <th>Сайт 2</th>
-                            <th>Цена 1</th>
-                            <th>Дата 2</th>
-                        </tr>
 
-                        <tr>
-                            <th>Сайт 3</th>
-                            <th>Цена 1</th>
-                            <th>Дата 3</th>
-                        </tr>
-
-                        <tr>
-                            <th>Сайт 4</th>
-                            <th>Цена 1</th>
-                            <th>Дата 4</th>
-                        </tr>
-
-                        <tr>
-                            <th>Сайт 5</th>
-                            <th>Цена 1</th>
-                            <th>Дата 5</th>
-                        </tr>
                     </tbody>
                 </table>
             </div><br><br>
+            {% endfor %}
 
             <nav class="pagination is-centered" role="navigation" aria-label="pagination">
                 <a class="pagination-next" disabled>Предишна</a>
