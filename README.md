@@ -19,3 +19,12 @@
 <hr>
 <h1>🎥 Interface</h1>
 <img src = "interface.gif">
+<h1><a href = "#">Our Documentation</h1>
+<h1>⌨️ How it works</h1>
+<p>Our work can be split into 4 different parts</p>
+<ol>
+<li>The Site</li>
+<li>The Django Application</li>
+<li>The Database </li>
+<li>The Scraper</li>
+</ol>
