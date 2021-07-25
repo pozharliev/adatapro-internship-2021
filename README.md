@@ -27,7 +27,7 @@
 
 <img src = "interface.gif">
 
-<h1><a href = "https://codingburgas-my.sharepoint.com/:w:/r/personal/kntaligadzhiev19_codingburgas_bg/_layouts/15/Doc.aspx?sourcedoc=%7B97C0F57A-20E7-4145-AF17-5831ECDBA270%7D&file=Team%20RED.docx&action=default&mobileredirect=true">Our Documentation</h1>
+<h1><a href = "https://codingburgas-my.sharepoint.com/:w:/r/personal/kntaligadzhiev19_codingburgas_bg/_layouts/15/Doc.aspx?sourcedoc=%7B97C0F57A-20E7-4145-AF17-5831ECDBA270%7D&file=Team%20RED.docx&action=default&mobileredirect=true">Our Documentation </a></h1>
   
 <h1>⌨️ How it works</h1>
   
