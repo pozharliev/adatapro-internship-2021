@@ -150,5 +150,9 @@ python manage.py runserver PORT
 <h1>🧒 Our Team </h1>
 <p>Atanas Pozharliev - <a href = "https://github.com/ABPozharliev19">ABPozharliev19</a> - Back-End Developer</p>
   <p>Kostadin Taligadzhiev - <a href = "https://github.com/KNTaligadzhiev19>">KNTaligadzhiev19 </a> - Front-End Developer</p>
-  <p>Igor Simeonov - <a href = "https://github.com/GrandMaster-42"> GrandMaster-42 </a> - Scraping
-  <p> Velin Kurtev - <a href="https://github.com/Velin1234">Velin1234</a> - Scraping
+  <p>Igor Simeonov - <a href = "https://github.com/GrandMaster-42"> GrandMaster-42 </a> - Scraping </p>
+  <p> Velin Kurtev - <a href="https://github.com/Velin1234">Velin1234</a> - Scraping </p>
+    <p> Diyan Nedelchev - <a href="https://github.com/dido322">dido322</a> - Scraping </p>
+  <p> Kaloyan Totev - <a href = "https://github.com/KaloyanTotev339">KaloyanTotev339 </a> - Grafana & Docker Setup </p>
+
+  
