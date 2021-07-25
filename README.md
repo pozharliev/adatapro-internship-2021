@@ -74,37 +74,68 @@
 <h2>Step 1: Clone the repository</h2>
 <code>
 git clone https://github.com/ABPozharliev19/adatapro-internship-2021.git
+</code>
 <br>
+<code>
 cd adatapro-internship-2021/
 </code>
 <h2>Step 2: Install dependencies </h2>
 <h3>You can do this by either using pipenv:</h3>
 <code>
 pip3 install pipenv # Install pipenv with pip
+</code>
 <br>
+<code>
 pipenv shell # Activate the environment 
+</code>
 <br>
+<code>
 pipenv install # Install all dependencies in the Pipfile.lock file
 </code>
 <h3>Or by using pip:</h3>
 <code>
-pip3 install -r requirements.txt # Install all dependencies in the requirements.txt file
+pip3 install -r requirements.txt # Install all dependencies in the requirements.
 </code>
 <h2>Step 3: Rename env.example to .env</h2>
 <h2>Step 4: Change the information in the .env file</h2>
 <code>
-SECRET_KEY = 'Your django secret key'<br>
-DB_NAME = 'Your database name' <br>
-DB_USER = 'Your database user'<br>
-DB_PASSWORD = 'Your database password'<br>
-DB_HOST = 'Your host'<br>
-DB_PORT = 3306 # The port you want to use<br>
-EMAIL_HOST_USER = 'Your email username' # Should be gmail<br>
-EMAIL_HOST_PASSWORD = 'Your email password'<br>
+SECRET_KEY = 'Your django secret key'
 </code>
+<br>
+<code>
+DB_NAME = 'Your database name'
+</code>
+<br>
+<code>
+DB_USER = 'Your database user'
+</code>
+<br>
+<code>
+DB_PASSWORD = 'Your database password'
+</code>
+<br>
+<code>
+DB_HOST = 'Your host'
+</code>
+<br>
+<code>
+DB_PORT = 3306 # The port you want to use
+</code>
+<br>
+<code>
+EMAIL_HOST_USER = 'Your email username' # Should be gmail
+</code>
+<br>
+<code>
+EMAIL_HOST_PASSWORD = 'Your email password'
+</code>
+
 <h2>Step 5: Make the migrations and migrate the models</h2>
 <code>
-python manage.py makemigrations <br>
+python manage.py makemigrations
+</code>
+<br>
+<code>
 python manage.py migrate
 </code>
 <h2>Step 6: Run the server</h2>
