@@ -22,4 +22,4 @@
 <p><strong> Introducing our solution - a scraper with a site to display its results.</strong></p>
 <hr>
 <h1>🎥 Interface</h1>
-<video src = "https://i.imgur.com/he0ApCb.mp4></video>
+<img src = "interface.gif">
