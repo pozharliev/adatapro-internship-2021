@@ -147,3 +147,8 @@ python manage.py runserver
 python manage.py runserver PORT
 </code>
 <h2>Step 7: Go to localhost:PORT and use the site!</h2>
+<h1>🧒 Our Team </h1>
+<p>Atanas Pozharliev - <a href = "https://github.com/ABPozharliev19">ABPozharliev19</a> - Back-End Developer</p>
+  <p>Kostadin Taligadzhiev - <a href = "https://github.com/KNTaligadzhiev19>">KNTaligadzhiev19 </a> - Front-End Developer</p>
+  <p>Igor Simeonov - <a href = "https://github.com/GrandMaster-42"> GrandMaster-42 </a> - Scraping
+  <p> Velin Kurtev - <a href="https://github.com/Velin1234">Velin1234</a> - Scraping
